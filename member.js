@@ -1,12 +1,10 @@
-function skillsmember() {
-    var member = document.getElementById("member");
-    var skills = document.getElementById("skills");
-    var projects = document.getElementById("projects");
-    var contact = document.getElementById("contact");
-    var about = document.getElementById("about");
-    member.style.display = "block";
-    skills.style.display = "none";
-    projects.style.display = "none";
-    contact.style.display = "none";
-    about.style.display = "none";
+function skillsMember() {
+  var skills = document.getElementById("skills");
+  var skillsMember = document.getElementById("skillsMember");
+  var skillsMemberValue = skillsMember.value;
+  var skillsMemberText = skillsMember.options[skillsMember.selectedIndex].text;
+  var skillsMemberOption = document.createElement("option");
+  skillsMemberOption.text = skillsMemberText;
+  skillsMemberOption.value = skillsMemberValue;
+  skills.add(skillsMemberOption);
 }
